@@ -1,0 +1,21 @@
+name: WorldTP
+main: worldtp.Main
+version: "1.0.0"
+author: maru
+api: ["1.0.0"]
+
+commands:
+ tpw:
+  usage: /tpw <world>
+  description: Teleport to other world
+  permission: tpworld.commands.tpw
+
+permissions:
+ tpworld.*:
+  default: true
+  children:
+   tpworld.commands.*:
+    default: true
+    children:
+     tpworld.commands.tpw:
+      default: true
